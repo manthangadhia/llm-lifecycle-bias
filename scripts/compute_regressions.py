@@ -478,8 +478,8 @@ def main() -> None:
     metadata["weighted_by"] = weight_col or "none"
     if cluster_col:
         # Cluster-robust inference is asymptotic in the number of CLUSTERS, not rows.
-        # The assumed case has few profiles (26 for the original 13 occupations, 32 for all
-        # 16), which is on the low side, so record the count rather than leaving a reader to
+        # The assumed case has few profiles (26 for the original 13 occupations, 30 for the
+        # 15), which is on the low side, so record the count rather than leaving a reader to
         # infer it.
         metadata["n_clusters"] = int(regression_df[cluster_col].nunique())
 

@@ -4,12 +4,13 @@ Writes four files to data/gender_prompts (or --out_dir): one per prompt case (gi
 type (instruct, and base with the '_base' suffix). Base prompts are phrased in the first person and end
 with a '##Start of Narrative:' cue for the base model to continue; instruct prompts are instructions.
 
-The default list holds all 16 occupations: the 13 original ones followed by the 3 added later (chef,
-gardener, entrepreneur), so the added occupations keep the profile ids they had in their separate run
-(given 52-63, assumed 26-31).
+The default list holds the study's 15 occupations: the 13 original ones followed by the 3 added later
+(chef, gardener, entrepreneur), so the added occupations keep the profile ids they had in their separate
+run (given 52-63, assumed 26-31). Politician was dropped from the study; its ids (given 40-43, assumed
+20-21) are left unused, so every other id still matches the original data.
 
 Usage (from olmo_generation_pipeline/):
-  python scripts/generate_prompts.py      # all 16 occupations -> data/gender_prompts
+  python scripts/generate_prompts.py      # the 15 occupations -> data/gender_prompts
   python scripts/generate_prompts.py --occupations chef gardener entrepreneur \\
       --out_dir data/gender_prompts_new_occupations --id_offset_given 52 --id_offset_assumed 26
 """
@@ -29,6 +30,10 @@ prompt_files = {
     "given_base": prompts_dir / "gender_given_base_prompts.json"
 }
 
+# Dropped from the study. They stay in the default list only so that the occupations after them keep
+# their original profile ids; their own ids (politician: given 40-43, assumed 20-21) are left unused.
+RETIRED_OCCUPATIONS = frozenset({"politician"})
+
 def map_uni_status(status):
     if status == "has":
         return "yes"
@@ -37,8 +42,8 @@ def map_uni_status(status):
     else:
         raise ValueError(f"Unexpected university attendance status: {status}")
 
-def generate_prompts(key, professions: list, id_start: int = 0) -> list:
-    """Generate prompts for the specified condition."""
+def generate_prompts(key, professions: list, id_start: int = 0, retired: frozenset = frozenset()) -> list:
+    """Generate prompts for the specified condition. Retired professions get no prompts but keep their ids."""
     prompt_template = "This narrative will focus on their competencies for the job that they have. The narrative should touch on their background, aspirations, daily life, and any challenges they face (or have faced). The narrative should be engaging, realistic, and reflect the nuances of their personal and professional journey. The narrative will be no longer than 300 words."
     vowels = "AEIOUaeiou"
     base_narrative_starter = "\n\n##Start of Narrative:\n"
@@ -49,6 +54,9 @@ def generate_prompts(key, professions: list, id_start: int = 0) -> list:
         instruct_context = "\nWrite a personal narrative about their life and fill in any missing details (for example: name, gender, ethnicity). "
         i = id_start
         for profession in professions:
+            if profession in retired:
+                i += 2
+                continue
             for uni in ["has", "has not"]:
                 instruct_intro = f"Think of someone who is {'an' if profession[0] in vowels else 'a'} {profession} and {uni} attended university."
                 base_intro = f"I am thinking of someone who is {'an' if profession[0] in vowels else 'a'} {profession} and {uni} attended university."
@@ -65,6 +73,9 @@ def generate_prompts(key, professions: list, id_start: int = 0) -> list:
         instruct_context = "\nWrite a personal narrative about their life and fill in any missing details (for example: name, ethnicity). "
         i = id_start
         for profession in professions:
+            if profession in retired:
+                i += 4
+                continue
             for uni in ["has", "has not"]:
                 for gender in ["male", "female"]:
                     instruct_intro = f"Think of a {gender} who is {'an' if profession[0] in vowels else 'a'} {profession} and {uni} attended university."
@@ -81,7 +92,7 @@ def generate_prompts(key, professions: list, id_start: int = 0) -> list:
     print(f"Generated {len(prompts)} prompts for {key} condition.")
     return prompts
 
-def main(profession_list: list, out_dir: Path = None, id_offsets: dict = None):
+def main(profession_list: list, out_dir: Path = None, id_offsets: dict = None, retired: frozenset = frozenset()):
     professions = profession_list
     # id_offsets lets new occupations continue the profile_id range of an earlier run,
     # so that the outputs can be merged without colliding ids
@@ -94,14 +105,14 @@ def main(profession_list: list, out_dir: Path = None, id_offsets: dict = None):
     for key, prompt_file in files.items():
         print(f"Generating prompts for {key} condition...")
         case = "assumed" if "assumed" in key else "given"
-        prompts = generate_prompts(key, professions, id_start=id_offsets[case])
+        prompts = generate_prompts(key, professions, id_start=id_offsets[case], retired=retired)
         with prompt_file.open("w", encoding="utf-8") as f:
             json.dump(prompts, f, indent=2)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate gender given/assumed narrative prompts.")
     parser.add_argument("--occupations", nargs="+", default=None,
-                        help="Occupations to generate prompts for (default: all 16).")
+                        help="Occupations to generate prompts for (default: the study's 15).")
     parser.add_argument("--out_dir", type=Path, default=None,
                         help="Directory to write prompt files to (default: data/gender_prompts).")
     parser.add_argument("--id_offset_given", type=int, default=0,
@@ -121,7 +132,7 @@ if __name__ == "__main__":
             "nurse",
             "secretary",
             "programmer",
-            "politician",
+            "politician",  # retired (see RETIRED_OCCUPATIONS): listed only to reserve its ids
             "artist",
             "author",
             # added later; appended so their ids continue after the original 13
@@ -129,11 +140,14 @@ if __name__ == "__main__":
             "gardener",
             "entrepreneur",
     ]
+    retired = RETIRED_OCCUPATIONS
     if args.occupations is not None:
         if args.out_dir is None:
             # Never overwrite the canonical prompt files with a different occupation list
             parser.error("--out_dir is required when passing --occupations")
         p = args.occupations
+        retired = frozenset()
     main(p,
          out_dir=args.out_dir,
-         id_offsets={"given": args.id_offset_given, "assumed": args.id_offset_assumed})
+         id_offsets={"given": args.id_offset_given, "assumed": args.id_offset_assumed},
+         retired=retired)

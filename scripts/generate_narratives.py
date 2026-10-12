@@ -4,7 +4,7 @@ Generate gender given/assumed personal narratives with the four OLMo-3 7B varian
 Fork of scripts/olmo-generation/olmo_temperature.py with identical generation behaviour: every
 prompt is sampled at each temperature (10 generations per prompt for 'given', 20 for 'assumed'),
 with entropy tracking and the default 300-token budget. Prompts are read from data/gender_prompts
-(all 16 occupations) and results are written to data/results.
+(the 15 occupations of the study) and results are written to data/results.
 
 Without --model_key all four variants run in series (base -> sft -> dpo -> rlvr) and each prompt case
 gets one file holding every model: olmo7b_temp_results_{given,assumed}.jsonl. With --output_tag the tag

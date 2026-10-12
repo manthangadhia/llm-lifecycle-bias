@@ -10,7 +10,7 @@
 
 # ============================================================================================
 # TEMPLATE: written for ETH Euler (SLURM). CPUs and memory are those of the original metrics job
-# (2 x 6GB); the time limit is raised to cover both metric scripts on both 10,240-row files.
+# (2 x 6GB); the time limit is raised to cover both metric scripts on both 9,600-row files.
 # Self-BLEU is CPU-bound; the GPU serves the sentence embeddings and the sentiment/regard
 # classifiers. Adjust the job settings and the paths below for your own cluster.
 # ============================================================================================

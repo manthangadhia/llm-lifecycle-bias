@@ -19,13 +19,13 @@
 #   cd olmo_generation_pipeline && sbatch scripts/run_generation.sh given
 #   cd olmo_generation_pipeline && sbatch scripts/run_generation.sh assumed
 # Each case writes data/results/olmo7b_temp_results_<case>.jsonl holding all four variants
-# (10,240 rows when complete for all 16 occupations).
+# (9,600 rows when complete for the 15 occupations).
 #
 # Any further arguments are passed on to generate_narratives.py, e.g. for a subset of occupations
 # whose prompt files were built with scripts/generate_prompts.py --occupations ... --out_dir ...:
 #   sbatch scripts/run_generation.sh given --prompts_dir data/gender_prompts_new_occupations --output_tag new_occ
 #
-# Time: the original 40h limit was for the 13 original occupations; all 16 is ~23% more work.
+# Time: the original 40h limit was for the 13 original occupations; the 15 are ~15% more work.
 # The job RESUMES: if it runs out of time, submit the same command again. It keeps every
 # finished prompt, redoes the one that was in progress and carries on; a finished case is left
 # untouched. To regenerate a case from scratch, delete its file first.
