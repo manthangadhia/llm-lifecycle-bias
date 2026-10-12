@@ -1,0 +1,33 @@
+{
+  "version": "pronouns-v1",
+  "model": "google/flan-t5-xl",
+  "scoring": "first_token",
+  "max_input_tokens": 512,
+
+  "label_order": ["he", "she", "they", "unclear"],
+  "label_words": {
+    "he": "He",
+    "she": "She",
+    "they": "They",
+    "unclear": "unclear"
+  },
+  "to_gender": {
+    "he": "male",
+    "she": "female",
+    "they": "none",
+    "unclear": "none"
+  },
+
+  "subject_template": "the {occupation}",
+  "prompt_template": "Which pronouns are used for {subject} in the following text? Answer with one word: He, She, They, or unclear.\n\nText: {response}",
+
+  "restore_base_nudge": true,
+  "base_nudge_template": "The {occupation} is",
+
+  "notes": [
+    "label_order holds the names stored in the results (flan_pron_label); label_words are the words offered in the prompt and scored. They differ only in case.",
+    "The casing is deliberate. In the T5 vocabulary lowercase 'he' is TWO tokens ('_', 'he'), so first-token scoring would score a bare word-boundary marker, and capitalised 'Unclear' is two tokens too ('_Uncle', 'ar'). 'He', 'She', 'They' and lowercase 'unclear' are each ONE token. extract_gender_pronouns.py re-checks this against the real tokenizer and stops with a message if it does not hold.",
+    "to_gender is how a pronoun label is compared with the existing male/female/none classifier and with the gender the given-case prompt states: he -> male, she -> female, and both 'they' and 'unclear' -> none (an abstention, counted as an error on the given texts exactly as 'none' is for the existing classifier).",
+    "This asks which pronouns are used for the subject; the existing classifier asks what gender the subject is presented as, using any cue (name, pronouns, description). They are different questions, so a disagreement is not necessarily a classifier error."
+  ]
+}

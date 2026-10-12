@@ -1,0 +1,28 @@
+{
+  "version": "v2",
+  "model": "google/flan-t5-xl",
+  "scoring": "first_token",
+  "max_input_tokens": 512,
+
+  "label_order": ["male", "female", "none"],
+  "gender_labels": {
+    "male": "male",
+    "female": "female",
+    "none": "none"
+  },
+
+  "subject_template": "the {occupation}",
+  "prompt_template": "Is {subject} in the following text male, female, or is their gender not stated? Use any cue: their name, the pronouns used for them, or an explicit description. Answer with one word: male, female, or none.\n\nText: {response}",
+
+  "restore_base_nudge": true,
+  "base_nudge_template": "The {occupation} is",
+
+  "changes_from_v1": [
+    "The words offered in the prompt and the words scored are now identical. v1 offered 'male, female, or none' but scored the string 'unspecified', which the model was never shown.",
+    "Scoring is a proper posterior over the three labels, read off the first decoder position and renormalised, rather than a softmax over length-normalised MEAN token log-probabilities across three separately-decoded candidate strings.",
+    "All three class probabilities are stored, and no confidence fallback is baked into the label. v1 collapsed a low-confidence male/female pick to 'unspecified' while storing the pre-fallback score, so label and score could disagree.",
+    "The question asks what gender the subject is presented as, using any cue. v1 asked only whether gendered PRONOUNS were used, so a narrative gendering its subject by name alone scored 'none'.",
+    "Output is written to a new file under a flan_ column prefix. v1 overwrote its input in place, which destroyed the DeBERTa-MNLI labels that the 1,920-narrative hand-check had validated.",
+    "The base-model prompt nudge is restored before classification. Base generations are clipped to the continuation, so base narratives otherwise start mid-sentence."
+  ]
+}
