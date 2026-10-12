@@ -4,3 +4,6 @@
 
 # Model weights (~15GB per variant) when downloaded to the default ./models cache
 models/
+
+# Local files
+*.tex
