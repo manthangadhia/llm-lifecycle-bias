@@ -1,0 +1,40 @@
+{
+  "prompt_case": "given",
+  "metric_cols": [
+    "self_bleu",
+    "semantic_div",
+    "mean_entropy",
+    "min_distinct_n",
+    "sentiment",
+    "regard"
+  ],
+  "temperature_spec": "linear",
+  "temperature_terms": "temperature_z",
+  "created_at": "2026-10-11T21:14:09.307372+00:00",
+  "input_path": "..\\full_pipeline\\data\\results\\olmo_15occ\\olmo7b_temp_results_given.jsonl",
+  "group_keys": [
+    "profile_id",
+    "temperature",
+    "model_key"
+  ],
+  "gender_balance": {
+    "counts": {
+      "male": 480,
+      "female": 480
+    },
+    "n_male": 480,
+    "n_female": 480,
+    "female_share_of_binary": 0.5
+  },
+  "groups_dropped_unlabelled": 0,
+  "min_group_size": 1,
+  "n_groups_fitted": 960,
+  "response_count_summary": {
+    "min": 10,
+    "median": 10.0,
+    "max": 10
+  },
+  "cluster_on": "none",
+  "weighted_by": "response_count",
+  "formula": "{metric}_z ~ is_female + is_sft + is_dpo + is_rlvr + is_female:is_sft + is_female:is_dpo + is_female:is_rlvr + C(occupation) + is_university + temperature_z"
+}

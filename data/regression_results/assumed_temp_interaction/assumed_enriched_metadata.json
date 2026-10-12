@@ -1,0 +1,61 @@
+{
+  "prompt_case": "assumed",
+  "metric_cols": [
+    "self_bleu",
+    "semantic_div",
+    "mean_entropy",
+    "min_distinct_n",
+    "sentiment",
+    "regard"
+  ],
+  "temperature_spec": "interaction",
+  "temperature_terms": "C(temperature) * (is_sft + is_dpo + is_rlvr)",
+  "created_at": "2026-10-11T21:14:53.172335+00:00",
+  "assumed_label_col": "flan_gender",
+  "input_path": "..\\full_pipeline\\data\\results\\olmo_15occ\\olmo7b_temp_results_assumed.jsonl",
+  "group_keys": [
+    "profile_id",
+    "temperature",
+    "model_key",
+    "gender"
+  ],
+  "assumed_label_heterogeneity": {
+    "n_cells": 480,
+    "cells_by_distinct_labels": {
+      "1": 73,
+      "2": 205,
+      "3": 202
+    },
+    "share_of_cells_with_mixed_labels": 0.8479166666666667
+  },
+  "gender_balance": {
+    "counts": {
+      "female": 455,
+      "male": 350,
+      "none": 284
+    },
+    "n_male": 350,
+    "n_female": 455,
+    "female_share_of_binary": 0.5652173913043478
+  },
+  "groups_dropped_unlabelled": 284,
+  "min_group_size": 1,
+  "n_groups_fitted": 805,
+  "response_count_summary": {
+    "min": 1,
+    "median": 12.0,
+    "max": 20
+  },
+  "cluster_on": "profile_id",
+  "weighted_by": "response_count",
+  "n_clusters": 30,
+  "formula": "{metric}_z ~ is_female + is_sft + is_dpo + is_rlvr + is_female:is_sft + is_female:is_dpo + is_female:is_rlvr + C(occupation) + is_university + C(temperature) * (is_sft + is_dpo + is_rlvr)",
+  "gender_label_caveat": "is_female in this file is inferred from the model's own response by a classifier, not a ground-truth profile attribute. It is a collider on the path from alignment stage to text properties, so conditioning on it can induce association even where none exists. Model A' tests whether model/temperature shift this predicted label; Model B' coefficients on is_female should be read as 'conditional on the model having assumed this gender', not as a causal effect of gender.",
+  "model_a_prime": {
+    "formula": "is_female ~ is_sft + is_dpo + is_rlvr + C(occupation) + is_university + C(temperature) * (is_sft + is_dpo + is_rlvr)",
+    "level": "response",
+    "nobs": 8924,
+    "converged": true,
+    "prsquared": 0.3722157516852398
+  }
+}

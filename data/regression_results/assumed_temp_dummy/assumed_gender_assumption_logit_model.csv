@@ -1,0 +1,2 @@
+metric,nobs,converged,llf,prsquared,cov_type
+is_female,8924,True,-3346.6013778995216,0.3703731804191037,cluster(cluster_id)

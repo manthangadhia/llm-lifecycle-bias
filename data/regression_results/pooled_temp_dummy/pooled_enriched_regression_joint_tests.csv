@@ -1,0 +1,7 @@
+metric,joint_test,expressions,fvalue,pvalue,df_num,df_denom
+self_bleu,scenario_x_gender_x_stage,is_female:is_sft:is_assumed; is_female:is_dpo:is_assumed; is_female:is_rlvr:is_assumed,2.5607150792008193,0.0599315751156164,3,89
+semantic_div,scenario_x_gender_x_stage,is_female:is_sft:is_assumed; is_female:is_dpo:is_assumed; is_female:is_rlvr:is_assumed,14.54622779752792,8.656232738028113e-08,3,89
+mean_entropy,scenario_x_gender_x_stage,is_female:is_sft:is_assumed; is_female:is_dpo:is_assumed; is_female:is_rlvr:is_assumed,4.964494275435498,0.003121043667114828,3,89
+min_distinct_n,scenario_x_gender_x_stage,is_female:is_sft:is_assumed; is_female:is_dpo:is_assumed; is_female:is_rlvr:is_assumed,4.978339535352371,0.0030692047085359472,3,89
+sentiment,scenario_x_gender_x_stage,is_female:is_sft:is_assumed; is_female:is_dpo:is_assumed; is_female:is_rlvr:is_assumed,9.523776118732377,1.6095369446183516e-05,3,89
+regard,scenario_x_gender_x_stage,is_female:is_sft:is_assumed; is_female:is_dpo:is_assumed; is_female:is_rlvr:is_assumed,0.08833601991244262,0.96627389776232,3,89

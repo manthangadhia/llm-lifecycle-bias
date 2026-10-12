@@ -1,0 +1,50 @@
+{
+  "prompt_case": "pooled",
+  "metric_cols": [
+    "self_bleu",
+    "semantic_div",
+    "mean_entropy",
+    "min_distinct_n",
+    "sentiment",
+    "regard"
+  ],
+  "temperature_spec": "dummy",
+  "temperature_terms": "C(temperature)",
+  "created_at": "2026-10-11T21:14:44.129919+00:00",
+  "assumed_label_col": "flan_gender",
+  "assumed_label_heterogeneity": {
+    "n_cells": 480,
+    "cells_by_distinct_labels": {
+      "1": 73,
+      "2": 205,
+      "3": 202
+    },
+    "share_of_cells_with_mixed_labels": 0.8479166666666667
+  },
+  "input_path": {
+    "given": "..\\full_pipeline\\data\\results\\olmo_15occ\\olmo7b_temp_results_given.jsonl",
+    "assumed": "..\\full_pipeline\\data\\results\\olmo_15occ\\olmo7b_temp_results_assumed.jsonl"
+  },
+  "gender_balance": {
+    "counts": {
+      "female": 935,
+      "male": 830,
+      "none": 284
+    },
+    "n_male": 830,
+    "n_female": 935,
+    "female_share_of_binary": 0.5297450424929179
+  },
+  "groups_dropped_unlabelled": 284,
+  "min_group_size": 1,
+  "n_groups_fitted": 1765,
+  "response_count_summary": {
+    "min": 1,
+    "median": 10.0,
+    "max": 20
+  },
+  "cluster_on": "profile_id",
+  "weighted_by": "response_count",
+  "n_clusters": 90,
+  "formula": "{metric}_z ~ (is_female + is_sft + is_dpo + is_rlvr + is_female:is_sft + is_female:is_dpo + is_female:is_rlvr) * is_assumed + C(occupation) + is_university + C(temperature)"
+}
