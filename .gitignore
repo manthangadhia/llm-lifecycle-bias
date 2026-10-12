@@ -1,0 +1,6 @@
+# Secrets: only the placeholder .env.example is shared
+.env
+!.env.example
+
+# Model weights (~15GB per variant) when downloaded to the default ./models cache
+models/
