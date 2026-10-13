@@ -1,0 +1,85 @@
+profession,bls_category,pct_female,pct_male,total_employed_thousands,notes
+manager,Management occupations,41.8,58.2,20876.0,BLS: Management occupations
+director,Producers and directors,43.6,56.4,216.0,BLS: Producers and directors
+entrepreneur,"Managers, all other",37.7,62.3,5471.0,"No direct match; proxy: Managers, all other"
+administrator,Administrative services managers,69.3,30.7,113.0,BLS: Administrative services managers
+gardener,Landscaping and groundskeeping workers,7.9,92.1,1114.0,BLS: Landscaping and groundskeeping workers
+warrior,N/A — no BLS match,,,,No civilian BLS occupation equivalent
+soldier,Military occupations (all branches),,,,BLS does not report CPS % women for active-duty military; DoD data needed
+sailor,Sailors and marine oilers,,,19.0,"BLS: Sailors and marine oilers = 19k total, below 50k publication threshold so % women not published"
+carpenter,Carpenters,3.1,96.9,1178.0,BLS: Carpenters (published 2025 annual avg)
+trader,"Securities, commodities, and financial services sales agents",21.8,78.2,199.0,BLS: Securities/commodities/financial sales agents
+commentator,"News analysts, reporters, and journalists",41.1,58.9,86.0,Best BLS proxy for commentator
+inspector,Compliance officers,52.7,47.3,312.0,BLS: Compliance officers (includes inspectors)
+broker,Real estate brokers and sales agents,55.8,44.2,1065.0,BLS: Real estate brokers and sales agents
+analyst,Management analysts,40.7,59.3,1084.0,BLS: Management analysts
+consultant,Management analysts,40.7,59.3,1084.0,BLS: Management analysts (proxy for consultant)
+strategist,Management analysts,40.7,59.3,1084.0,No direct match; proxy: Management analysts
+economist,Economists,,,34.0,Sample too small to publish (n<50k)
+bureaucrat,N/A — no BLS match,,,,No direct BLS civilian occupation equivalent
+president,Chief executives,33.0,67.0,1802.0,BLS: Chief executives
+diplomat,N/A — no BLS match,,,,No distinct diplomat category in CPS
+politician,Legislators,,,18.0,Sample too small to publish (n<50k)
+minister,Clergy,23.7,76.3,405.0,BLS: Clergy
+senator,Legislators,,,18.0,Sample too small to publish (n<50k)
+maid,Maids and housekeeping cleaners,86.4,13.6,1392.0,BLS: Maids and housekeeping cleaners
+janitor,Janitors and building cleaners,36.2,63.8,2341.0,BLS: Janitors and building cleaners
+commander,N/A — no BLS match,,,,No distinct civilian BLS equivalent
+lieutenant,N/A — no BLS match,,,,No distinct civilian BLS equivalent
+colonel,N/A — no BLS match,,,,No distinct civilian BLS equivalent
+cashier,Cashiers,68.5,31.5,2490.0,BLS: Cashiers
+driver,Driver/sales workers and truck drivers,7.7,92.3,3583.0,BLS: Driver/sales workers and truck drivers (published 2025 annual avg)
+cook,Cooks,43.7,56.3,2099.0,BLS: Cooks
+tailor,"Tailors, dressmakers, and sewers",72.8,27.2,60.0,"BLS: Tailors, dressmakers, and sewers (published 2025 annual avg)"
+baker,Bakers,62.5,37.5,277.0,BLS: Bakers (published 2025 annual avg)
+weaver,"Textile, apparel, and furnishings workers",,,,"No distinct weaver/textile aggregate published; nearest proxy ""Other textile, apparel, and furnishings workers"" (14k) below publication threshold — no reliable figure"
+butcher,"Butchers and other meat, poultry, and fish processing workers",22.1,77.9,255.0,"BLS: Butchers and other meat, poultry, and fish processing workers (published 2025 annual avg)"
+secretary,Secretaries and administrative assistants,91.9,8.1,1491.0,"BLS: Secretaries and administrative assistants, except legal, medical, and executive (published 2025 annual avg)"
+clerk,Office and administrative support occupations,70.5,29.5,16444.0,BLS: Office and admin support (broad category)
+nurse,Registered nurses,87.3,12.7,3528.0,BLS: Registered nurses
+therapist,"Therapists, all other",78.1,21.9,323.0,"BLS: Therapists, all other"
+doctor,Physicians (other),41.7,58.3,929.0,BLS: Other physicians
+psychologist,Other psychologists,71.3,28.7,152.0,BLS: Other psychologists
+physician,Physicians (other),41.7,58.3,929.0,BLS: Other physicians
+surgeon,Surgeons,25.9,74.1,73.0,BLS: Surgeons
+dentist,Dentists,38.6,61.4,192.0,BLS: Dentists
+chef,Chefs and head cooks,26.4,73.6,516.0,BLS: Chefs and head cooks
+programmer,Computer programmers,18.5,81.5,381.0,BLS: Computer programmers
+laborer,Construction laborers,4.7,95.3,2382.0,BLS: Construction laborers (published 2025 annual avg)
+actor,Actors,,,43.0,Sample too small to publish (n<50k)
+author,Writers and authors,66.8,33.2,234.0,BLS: Writers and authors
+artist,Artists and related workers,59.9,40.1,302.0,BLS: Artists and related workers
+writer,Writers and authors,66.8,33.2,234.0,BLS: Writers and authors
+poet,Writers and authors,66.8,33.2,234.0,No distinct poet category; proxy: Writers and authors
+coach,Coaches and scouts,47.4,52.6,362.0,BLS: Coaches and scouts
+athlete,Athletes and sports competitors,,,44.0,Sample too small to publish (n<50k)
+photographer,Photographers,50.7,49.3,216.0,BLS: Photographers
+farmer,"Farmers, ranchers, and other agricultural managers",25.7,74.3,810.0,"BLS: Farmers, ranchers, and other agricultural managers"
+fisher,Fishing and hunting workers,,,35.0,"BLS: Fishing and hunting workers = 35k total, below 50k publication threshold so % women not published"
+mechanic,Automotive service technicians and mechanics,1.8,98.2,901.0,BLS: Automotive service technicians and mechanics (published 2025 annual avg)
+blacksmith,N/A — no BLS match,,,,No distinct blacksmith category in CPS
+sergeant,N/A — no BLS match,,,,Military rank; no civilian BLS equivalent
+caretaker,Personal care aides,79.8,20.2,1840.0,BLS: Personal care aides
+porter,"Baggage porters, bellhops, and concierges",19.8,80.2,80.0,"BLS: Baggage porters, bellhops, and concierges"
+servant,N/A — no BLS match,,,,No distinct household servant category in CPS
+stylist,"Hairdressers, hairstylists, and cosmetologists",92.0,8.0,747.0,"BLS: Hairdressers, hairstylists, and cosmetologists"
+butler,N/A — no BLS match,,,,No distinct butler category in CPS
+barber,Barbers,17.7,82.3,141.0,BLS: Barbers
+supervisor,First-line supervisors of office and admin support,68.6,31.4,1382.0,BLS: First-line supervisors of office/admin support (broad proxy)
+officer,Police officers,16.4,83.6,705.0,BLS: Police officers (most common 'officer' category)
+ranger,Fish and game wardens,,,11.0,Sample too small to publish (n<50k)
+police,Police officers,16.4,83.6,705.0,BLS: Police officers
+guard,Security guards and gambling surveillance officers,22.9,77.1,962.0,BLS: Security guards and gambling surveillance officers
+detective,Detectives and criminal investigators,31.6,68.4,155.0,BLS: Detectives and criminal investigators
+sales,Sales and related occupations (all),47.4,52.6,14159.0,BLS: Sales and related occupations (broad category)
+technician,Engineering technologists and technicians,25.1,74.9,385.0,BLS: Other engineering technologists/technicians (broad proxy)
+engineer,Architecture and engineering occupations,19.3,80.7,3675.0,BLS: Architecture and engineering occupations (broad)
+architect,"Architects, except landscape and naval",29.8,70.2,254.0,"BLS: Architects, except landscape and naval"
+researcher,"Life, physical, and social science occupations",49.4,50.6,1858.0,"BLS: Life, physical, and social science occupations (broad)"
+scientist,"Life, physical, and social science occupations",49.4,50.6,1858.0,"BLS: Life, physical, and social science occupations (broad)"
+chemist,Chemists and materials scientists,31.1,68.9,106.0,BLS: Chemists and materials scientists
+teacher,"Education, training, and library occupations",74.4,25.6,9452.0,"BLS: Education, training, and library occupations (broad)"
+scholar,Postsecondary teachers,52.3,47.7,1058.0,No distinct 'scholar' category; proxy: Postsecondary teachers
+professor,Postsecondary teachers,52.3,47.7,1058.0,BLS: Postsecondary teachers
+dean,Education and childcare administrators,66.4,33.6,1052.0,BLS: Education and childcare administrators
+principal,Education and childcare administrators,66.4,33.6,1052.0,BLS: Education and childcare administrators

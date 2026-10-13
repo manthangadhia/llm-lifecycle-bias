@@ -1,0 +1,462 @@
+[
+    {
+        "profession":"manager",
+        "category":"administrative and commercial managers",
+        "count":22965
+    },
+    {
+        "profession":"director",
+        "category":"administrative and commercial managers",
+        "count":21217
+    },
+    {
+        "profession":"entrepreneur",
+        "category":"administrative and commercial managers",
+        "count":8741
+    },
+    {
+        "profession":"administrator",
+        "category":"administrative and commercial managers",
+        "count":4149
+    },
+    {
+        "profession":"gardener",
+        "category":"agricultural, forestry and fishery labourers",
+        "count":801
+    },
+    {
+        "profession":"warrior",
+        "category":"armed forces occupations, other ranks",
+        "count":5947
+    },
+    {
+        "profession":"soldier",
+        "category":"armed forces occupations, other ranks",
+        "count":5812
+    },
+    {
+        "profession":"sailor",
+        "category":"armed forces occupations, other ranks",
+        "count":1166
+    },
+    {
+        "profession":"mason",
+        "category":"building and related trades workers (excluding electricians)",
+        "count":1919
+    },
+    {
+        "profession":"carpenter",
+        "category":"building and related trades workers (excluding electricians)",
+        "count":857
+    },
+    {
+        "profession":"trader",
+        "category":"business and administration associate professionals",
+        "count":2495
+    },
+    {
+        "profession":"commentator",
+        "category":"business and administration associate professionals",
+        "count":1673
+    },
+    {
+        "profession":"inspector",
+        "category":"business and administration associate professionals",
+        "count":1515
+    },
+    {
+        "profession":"broker",
+        "category":"business and administration associate professionals",
+        "count":998
+    },
+    {
+        "profession":"analyst",
+        "category":"business and administration professionals",
+        "count":9148
+    },
+    {
+        "profession":"consultant",
+        "category":"business and administration professionals",
+        "count":3972
+    },
+    {
+        "profession":"strategist",
+        "category":"business and administration professionals",
+        "count":1694
+    },
+    {
+        "profession":"economist",
+        "category":"business and administration professionals",
+        "count":1652
+    },
+    {
+        "profession":"bureaucrat",
+        "category":"business and administration professionals",
+        "count":1609
+    },
+    {
+        "profession":"president",
+        "category":"chief executives, senior officials and legislators",
+        "count":11166
+    },
+    {
+        "profession":"diplomat",
+        "category":"chief executives, senior officials and legislators",
+        "count":4691
+    },
+    {
+        "profession":"politician",
+        "category":"chief executives, senior officials and legislators",
+        "count":4471
+    },
+    {
+        "profession":"minister",
+        "category":"chief executives, senior officials and legislators",
+        "count":3012
+    },
+    {
+        "profession":"senator",
+        "category":"chief executives, senior officials and legislators",
+        "count":1551
+    },
+    {
+        "profession":"maid",
+        "category":"cleaners and helpers",
+        "count":3742
+    },
+    {
+        "profession":"janitor",
+        "category":"cleaners and helpers",
+        "count":665
+    },
+    {
+        "profession":"captain",
+        "category":"commissioned armed forces officers",
+        "count":4386
+    },
+    {
+        "profession":"commander",
+        "category":"commissioned armed forces officers",
+        "count":2873
+    },
+    {
+        "profession":"marshal",
+        "category":"commissioned armed forces officers",
+        "count":1786
+    },
+    {
+        "profession":"lieutenant",
+        "category":"commissioned armed forces officers",
+        "count":779
+    },
+    {
+        "profession":"colonel",
+        "category":"commissioned armed forces officers",
+        "count":620
+    },
+    {
+        "profession":"cashier",
+        "category":"customer services clerks",
+        "count":673
+    },
+    {
+        "profession":"driver",
+        "category":"drivers and mobile plant operators",
+        "count":13569
+    },
+    {
+        "profession":"cook",
+        "category":"food preparation assistants",
+        "count":1960
+    },
+    {
+        "profession":"tailor",
+        "category":"food processing, woodworking, garment and other craft and related trades workers",
+        "count":30129
+    },
+    {
+        "profession":"baker",
+        "category":"food processing, woodworking, garment and other craft and related trades workers",
+        "count":5398
+    },
+    {
+        "profession":"weaver",
+        "category":"food processing, woodworking, garment and other craft and related trades workers",
+        "count":947
+    },
+    {
+        "profession":"butcher",
+        "category":"food processing, woodworking, garment and other craft and related trades workers",
+        "count":837
+    },
+    {
+        "profession":"secretary",
+        "category":"general and keyboard clerks",
+        "count":2193
+    },
+    {
+        "profession":"clerk",
+        "category":"general and keyboard clerks",
+        "count":1026
+    },
+    {
+        "profession":"nurse",
+        "category":"health associate professionals",
+        "count":5704
+    },
+    {
+        "profession":"therapist",
+        "category":"health associate professionals",
+        "count":4806
+    },
+    {
+        "profession":"doctor",
+        "category":"health professionals",
+        "count":14106
+    },
+    {
+        "profession":"psychologist",
+        "category":"health professionals",
+        "count":3665
+    },
+    {
+        "profession":"physician",
+        "category":"health professionals",
+        "count":3120
+    },
+    {
+        "profession":"surgeon",
+        "category":"health professionals",
+        "count":1679
+    },
+    {
+        "profession":"dentist",
+        "category":"health professionals",
+        "count":1207
+    },
+    {
+        "profession":"chef",
+        "category":"hospitality, retail and other services managers",
+        "count":5616
+    },
+    {
+        "profession":"programmer",
+        "category":"information and communications technology professionals",
+        "count":3198
+    },
+    {
+        "profession":"laborer",
+        "category":"labourers in mining, construction, manufacturing and transport",
+        "count":588
+    },
+    {
+        "profession":"actor",
+        "category":"legal, social and cultural professionals",
+        "count":139454
+    },
+    {
+        "profession":"author",
+        "category":"legal, social and cultural professionals",
+        "count":37423
+    },
+    {
+        "profession":"artist",
+        "category":"legal, social and cultural professionals",
+        "count":32533
+    },
+    {
+        "profession":"writer",
+        "category":"legal, social and cultural professionals",
+        "count":17094
+    },
+    {
+        "profession":"poet",
+        "category":"legal, social and cultural professionals",
+        "count":11172
+    },
+    {
+        "profession":"coach",
+        "category":"legal, social, cultural and related associate professionals",
+        "count":8004
+    },
+    {
+        "profession":"athlete",
+        "category":"legal, social, cultural and related associate professionals",
+        "count":7514
+    },
+    {
+        "profession":"narrator",
+        "category":"legal, social, cultural and related associate professionals",
+        "count":4229
+    },
+    {
+        "profession":"photographer",
+        "category":"legal, social, cultural and related associate professionals",
+        "count":2638
+    },
+    {
+        "profession":"dj",
+        "category":"legal, social, cultural and related associate professionals",
+        "count":2420
+    },
+    {
+        "profession":"farmer",
+        "category":"market-oriented skilled agricultural workers",
+        "count":6134
+    },
+    {
+        "profession":"fisher",
+        "category":"market-oriented skilled forestry, fishery and hunting workers",
+        "count":2961
+    },
+    {
+        "profession":"mechanic",
+        "category":"metal, machinery and related trades workers",
+        "count":27637
+    },
+    {
+        "profession":"smith",
+        "category":"metal, machinery and related trades workers",
+        "count":19724
+    },
+    {
+        "profession":"blacksmith",
+        "category":"metal, machinery and related trades workers",
+        "count":578
+    },
+    {
+        "profession":"sergeant",
+        "category":"non-commissioned armed forces officers",
+        "count":755
+    },
+    {
+        "profession":"aide",
+        "category":"other clerical support workers",
+        "count":7864
+    },
+    {
+        "profession":"collector",
+        "category":"other clerical support workers",
+        "count":3248
+    },
+    {
+        "profession":"caretaker",
+        "category":"personal care workers",
+        "count":714
+    },
+    {
+        "profession":"porter",
+        "category":"personal service workers",
+        "count":8755
+    },
+    {
+        "profession":"servant",
+        "category":"personal service workers",
+        "count":2623
+    },
+    {
+        "profession":"stylist",
+        "category":"personal service workers",
+        "count":2105
+    },
+    {
+        "profession":"butler",
+        "category":"personal service workers",
+        "count":1144
+    },
+    {
+        "profession":"barber",
+        "category":"personal service workers",
+        "count":905
+    },
+    {
+        "profession":"supervisor",
+        "category":"production and specialized services managers",
+        "count":2930
+    },
+    {
+        "profession":"officer",
+        "category":"protective services workers",
+        "count":9860
+    },
+    {
+        "profession":"ranger",
+        "category":"protective services workers",
+        "count":9291
+    },
+    {
+        "profession":"police",
+        "category":"protective services workers",
+        "count":8624
+    },
+    {
+        "profession":"guard",
+        "category":"protective services workers",
+        "count":6568
+    },
+    {
+        "profession":"detective",
+        "category":"protective services workers",
+        "count":3525
+    },
+    {
+        "profession":"sales",
+        "category":"sales workers",
+        "count":21541
+    },
+    {
+        "profession":"technician",
+        "category":"science and engineering associate professionals",
+        "count":2016
+    },
+    {
+        "profession":"engineer",
+        "category":"science and engineering professionals",
+        "count":33875
+    },
+    {
+        "profession":"architect",
+        "category":"science and engineering professionals",
+        "count":25447
+    },
+    {
+        "profession":"researcher",
+        "category":"science and engineering professionals",
+        "count":17416
+    },
+    {
+        "profession":"scientist",
+        "category":"science and engineering professionals",
+        "count":15900
+    },
+    {
+        "profession":"chemist",
+        "category":"science and engineering professionals",
+        "count":15480
+    },
+    {
+        "profession":"teacher",
+        "category":"teaching professionals",
+        "count":24503
+    },
+    {
+        "profession":"scholar",
+        "category":"teaching professionals",
+        "count":19418
+    },
+    {
+        "profession":"professor",
+        "category":"teaching professionals",
+        "count":12953
+    },
+    {
+        "profession":"dean",
+        "category":"teaching professionals",
+        "count":12208
+    },
+    {
+        "profession":"principal",
+        "category":"teaching professionals",
+        "count":5587
+    }
+]
